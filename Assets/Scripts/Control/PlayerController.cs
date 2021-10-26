@@ -7,15 +7,18 @@ namespace Bonfire.Control
 {
     public class PlayerController : MonoBehaviour
     {
+        private bool isMoving = false;
+        private bool isTurning = false;
 
         public float speed = 3.0f;
         public float rotationSpeed = 150.0f;
-        private bool isMoving = false;
-        private bool isTurning = false;
         private float translation; 
         private float rotation;
         private Vector3 translationVelocity;
         private Vector3 rotationVelocity;
+
+        AudioSource footstepsSound;
+
 
         //Health health;
 
@@ -26,16 +29,15 @@ namespace Bonfire.Control
 
         void Start()
         {
-
+            //footstepsSound = GetComponent<AudioSource>();
         }
 
         void Update()
         {
             InteractWithMovement();
             UpdateAnimator();
-
-
         }
+
 
         private void InteractWithMovement()
         {
@@ -68,6 +70,8 @@ namespace Bonfire.Control
             rotationVelocity = new Vector3(0, rotation, 0);
             transform.Rotate(rotationVelocity);
 
+            //if (isMoving) { PlayFootstepsSound(); }
+
         }
 
         private void UpdateAnimator()
@@ -93,6 +97,16 @@ namespace Bonfire.Control
             isTurning = false;
 
         }
+
+
+        /*
+        private void PlayFootstepsSound()
+        {
+            footstepsSound.Play();
+
+        }
+        */
+
     }
 
 }
