@@ -24,6 +24,7 @@ namespace Bonfire.Control
     
         void Update()
         {
+
             if (Input.GetKeyDown(KeyCode.Alpha1))
             {
                OnlyActivateCamera(0);
@@ -39,9 +40,15 @@ namespace Bonfire.Control
                 OnlyActivateCamera(2);
             }
 
+            if (Input.GetKeyDown(KeyCode.Alpha4))
+            {
+                OnlyActivateCamera(3);
+            }
+
+
         }
 
-        
+
         private void OnlyActivateCamera(int j)
         {
 

@@ -7,17 +7,17 @@ namespace Bonfire.Control
 {
     public class BulletController : MonoBehaviour
     {
-        public float speed = 5.0f;
-        public float damage = 3.0f;
-        public Vector3 direction = Vector3.right;
+        [SerializeField] private float speed;
+        [SerializeField] private float damage = 3.0f;
+        private Vector3 direction;
         private float startTime;
-        //public GameObject cannonGameObject;
         private float bulletDestroyTime;
 
         // Start is called before the first frame update
         void Start()
         {
             startTime = Time.time;
+            SetBulletDestroyTime(2.0f);
         }
 
         // Update is called once per frame
@@ -42,6 +42,11 @@ namespace Bonfire.Control
         public void SetBulletDestroyTime(float destroyTime)
         {
             bulletDestroyTime = destroyTime;
+        }
+
+        public void SetBulletDirection(Vector3 direction)
+        {
+            this.direction = direction;
         }
 
         private void MoveEnemy()

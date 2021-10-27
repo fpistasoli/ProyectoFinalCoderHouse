@@ -7,18 +7,22 @@ namespace Bonfire.Control
 {
     public class PlayerController : MonoBehaviour
     {
+
+        [SerializeField] private float speed = 3.0f; //SerializeField permite cambiar una variable privada desde el inspector, pero no permite modificar desde otras clases
+        [SerializeField] private float rotationSpeed = 150.0f;
+
         private bool isMoving = false;
         private bool isTurning = false;
-
-        public float speed = 3.0f;
-        public float rotationSpeed = 150.0f;
         private float translation; 
         private float rotation;
         private Vector3 translationVelocity;
         private Vector3 rotationVelocity;
 
-        AudioSource footstepsSound;
+        [SerializeField] private GameObject bulletPrefab;
+        [SerializeField] private GameObject rightHand;
+        [SerializeField] private GameObject body;
 
+        //AudioSource footstepsSound;
 
         //Health health;
 
@@ -35,9 +39,9 @@ namespace Bonfire.Control
         void Update()
         {
             InteractWithMovement();
+            InteractWithCombat();
             UpdateAnimator();
         }
-
 
         private void InteractWithMovement()
         {
@@ -74,6 +78,31 @@ namespace Bonfire.Control
 
         }
 
+        private void InteractWithCombat()
+        {
+           
+            if (Input.GetButtonDown("Fire1"))
+            {
+                
+                GameObject bullet = Instantiate(bulletPrefab, rightHand.transform.position, bulletPrefab.transform.rotation);
+
+
+                //Quaternion.Euler(-90, transform.rotation.y, 0)
+
+
+                //bullet.transform.LookAt(transform.position);
+
+
+                bullet.GetComponent<BulletController>().SetBulletDirection(transform.forward);    
+            }
+                
+        }
+
+        private Vector3 GetTranslationDirection()
+        {
+            return Vector3.Normalize(translationVelocity); //obtengo la direccion de la traslacion al normalizarlo (vector unitario)
+        }
+
         private void UpdateAnimator()
         {
             Animator animatorController = GetComponent<Animator>();
@@ -97,6 +126,17 @@ namespace Bonfire.Control
             isTurning = false;
 
         }
+
+
+
+
+
+
+
+
+
+
+
 
 
         /*

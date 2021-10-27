@@ -7,10 +7,10 @@ namespace Bonfire.Control
 {
     public class CannonController : MonoBehaviour
     {
-        public GameObject bulletPrefab;
-        public float spawningTime = 3.0f;
+        [SerializeField] private GameObject bulletPrefab;
+        [SerializeField] private float spawningTime = 3.0f;
+        [SerializeField] private float bulletDestroyTime = 2.0f;
         private float spawningTimeLeft;
-        public float bulletDestroyTime = 2.0f;
 
         // Start is called before the first frame update
         void Start()
