@@ -11,7 +11,7 @@ namespace Bonfire.Control
         [SerializeField] private float speed = 3.0f; //SerializeField permite cambiar una variable privada desde el inspector, pero no permite modificar desde otras clases
         [SerializeField] private float rotationSpeed = 150.0f;
 
-        private bool isMoving = false;
+        private bool isMoving = false;  
         private bool isTurning = false;
         private float translation; 
         private float rotation;
@@ -21,6 +21,8 @@ namespace Bonfire.Control
         [SerializeField] private GameObject bulletPrefab;
         [SerializeField] private GameObject rightHand;
         [SerializeField] private GameObject body;
+
+        Animator animatorController;
 
         //AudioSource footstepsSound;
 
@@ -33,6 +35,7 @@ namespace Bonfire.Control
 
         void Start()
         {
+            animatorController = GetComponent<Animator>();
             //footstepsSound = GetComponent<AudioSource>();
         }
 
@@ -40,7 +43,8 @@ namespace Bonfire.Control
         {
             InteractWithMovement();
             InteractWithCombat();
-            UpdateAnimator();
+            //UpdateAnimator();
+       
         }
 
         private void InteractWithMovement()
@@ -105,7 +109,6 @@ namespace Bonfire.Control
 
         private void UpdateAnimator()
         {
-            Animator animatorController = GetComponent<Animator>();
 
             if (isMoving) // y/o girar
             {
@@ -127,14 +130,21 @@ namespace Bonfire.Control
 
         }
 
+        private void OnCollisionEnter(Collision collision)
+        {
+            if (collision.gameObject.tag == "Floor")
+            {
+                Debug.Log("Collided with " + collision.gameObject.name);
+            }
+
+            if (collision.gameObject.GetComponent<Shrinker>() != null)
+            {
+                Debug.Log(collision.gameObject.name + " has Shrinker component");
+            }
 
 
 
-
-
-
-
-
+        }
 
 
 
