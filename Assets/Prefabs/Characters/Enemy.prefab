@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09cf74f82d0b16c4f87b827f7dfc2a9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 7625684145782401373, guid: fd161f289ddfd0c46a38160a90a03f55, type: 3}
   speedToLook: 2
   speed: 1.5
   enemyType: 1

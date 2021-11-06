@@ -22,7 +22,7 @@ namespace Bonfire.Control
         [SerializeField] private GameObject rightHand;
         [SerializeField] private GameObject body;
 
-        Animator animatorController;
+        [SerializeField] private Animator animatorController;
 
         //AudioSource footstepsSound;
 
@@ -35,7 +35,6 @@ namespace Bonfire.Control
 
         void Start()
         {
-            animatorController = GetComponent<Animator>();
             //footstepsSound = GetComponent<AudioSource>();
         }
 
@@ -43,7 +42,7 @@ namespace Bonfire.Control
         {
             InteractWithMovement();
             InteractWithCombat();
-            //UpdateAnimator();
+            UpdateAnimator();
        
         }
 
@@ -112,16 +111,20 @@ namespace Bonfire.Control
 
             if (isMoving) // y/o girar
             {
-                animatorController.SetFloat("Forward", 1.0f);
-                animatorController.SetFloat("Turn", 0.0f);
+                //animatorController.SetFloat("Forward", 1.0f);
+                //animatorController.SetFloat("Turn", 0.0f);
+
+                animatorController.SetBool("isRunning", true);
+
             } else { // no se esta moviendo
+
+                animatorController.SetBool("isRunning", false);
+
                 if (isTurning)
                 {
-                    animatorController.SetFloat("Forward", 0.0f);
-                    animatorController.SetFloat("Turn", 1.0f);
+                    //animatorController.SetFloat("Turn", 1.0f);
                 } else { // idle
-                    animatorController.SetFloat("Forward", 0.0f);
-                    animatorController.SetFloat("Turn", 0.0f);
+                    //animatorController.SetFloat("Turn", 0.0f);
                 }
             }
 

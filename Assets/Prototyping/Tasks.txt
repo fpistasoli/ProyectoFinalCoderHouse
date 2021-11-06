@@ -1,0 +1,18 @@
+1) Player
+- Animation: flaming arrow, make fire
+
+2) AI:
+- Enemy animation
+- Types of enemies (NPCs): armed fixed, unarmed chaser
+- Objects that do harm: icy steam, frozen lakes
+
+3) Objects and collectable items:
+- Bonfires (5 of different flame colors: red, green, yellow, orange, violet)
+- HP Refill Bottles
+- Exit Door (frozen door)
+
+
+
+
+
+  

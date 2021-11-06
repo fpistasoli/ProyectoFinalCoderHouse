@@ -75,6 +75,7 @@
     <Compile Include="Assets\Scripts\Control\Teleporter.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Prototyping\Tasks.txt" />
     <None Include="Assets\Asset Packs\ShootingSound\ReadMe.txt" />
     <None Include="Assets\Asset Packs\Standard Assets\Environment\Water\Water4\Shaders\WaterInclude.cginc" />
     <None Include="Assets\Asset Packs\weaponpack_assets\License.txt" />

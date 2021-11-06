@@ -549,9 +549,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 3
   rotationSpeed: 150
-  bulletPrefab: {fileID: 0}
+  bulletPrefab: {fileID: 5783112767895607224, guid: 36af086f52b3d59459acef7b7e5ea8ad, type: 3}
   rightHand: {fileID: 0}
   body: {fileID: 0}
+  animatorController: {fileID: 0}
 --- !u!1001 &2091378066
 PrefabInstance:
   m_ObjectHideFlags: 0
