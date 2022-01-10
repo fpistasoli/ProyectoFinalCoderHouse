@@ -25,24 +25,14 @@ namespace Bonfire.Control
         void Update()
         {
 
-            if (Input.GetKeyDown(KeyCode.Alpha1))
+            if (Input.GetKeyDown(KeyCode.F1))
             {
                OnlyActivateCamera(0);
             }
 
-            if (Input.GetKeyDown(KeyCode.Alpha2))
+            if (Input.GetKeyDown(KeyCode.F2))
             {
                 OnlyActivateCamera(1);
-            }
-
-            if (Input.GetKeyDown(KeyCode.Alpha3))
-            {
-                OnlyActivateCamera(2);
-            }
-
-            if (Input.GetKeyDown(KeyCode.Alpha4))
-            {
-                OnlyActivateCamera(3);
             }
 
 

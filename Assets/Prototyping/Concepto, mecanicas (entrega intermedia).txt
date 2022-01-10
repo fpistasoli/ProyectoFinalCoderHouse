@@ -1,0 +1,28 @@
+CONCEPTO E HISTORIA DEL JUEGO:
+
+Akai es el único sobreviviente humano de la tierra de los Zlorp, unos seres malvados y resistentes a temperaturas por debajo de los 50 grados bajo cero.
+
+El objetivo del juego es que Akai logre encender las cinco fogatas antes de que su vida acabe por hipotermia o sea atacado por los Zlorp. Una vez que las cinco fogatas sean encendidas, se abrirá una puerta que deberá atravesar para avanzar al siguiente nivel.
+------------------------------
+
+Algunas aclaraciones sobre los objetivos específicos:
+
+- Inputs del jugador: 
+  * Flechas del teclado: movimiento por el mapa del nivel.
+  * Botón izquierdo del mouse: dispara proyectiles en su dirección forward.
+  * Botón derecho del mouse: solo si está muy cerca o sobre una fogata, la enciende.
+
+- Temporizadores:
+  * Spawner de proyectiles disparados por el enemigo en posición fija.
+  * Disminución de la vida del jugador: cuanto menos fogatas queden encender, más lento disminuye la vida del jugador, ya que el calor lo ayuda a sobrevivir ante la temperatura bajo cero (se muestra la vida en la Consola).
+
+- Cámaras:
+  * Tecla "1": se activa (por defecto) el follow camera que sigue al personaje, implementado con Cinemachine.
+  * Tecla "2": activa una cámara fija que muestra la puerta de salida del nivel. De esta forma, el jugador puede ver dónde se encuentra ésta y escapar por ella una vez que las cinco fogatas estén encendidas.
+
+- Colisiones:
+  * Encendido de fogatas: se implementa un OnTriggerStay para cuando el personaje está cerca de una fogata para poder así encenderla.
+  * Impacto de un proyectil con el jugador / enemigo.
+  * Golpe dado por un enemigo móvil al jugador.
+
+

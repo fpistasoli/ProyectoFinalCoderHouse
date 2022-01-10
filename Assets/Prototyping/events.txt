@@ -1,0 +1,14 @@
+c# events:
+
+- onDeath (player's death)
+- onLitBonfiresUpdate (publisher: BonfireSpawner, subscribers: GameManager y HUD)
+- onUnlightBonfires (al llegar al 50% de HP se apagan automáticamente todos los bonfires encendidos)
+
+unity events: (asociados a un prefab)
+- onSwitchDrones (activa y desactiva los drones)
+- onMovePlatform (mueve la plataforma con velocidad constante a un punto)
+- onSoar (player soars by standing on vent)
+
+
+
+

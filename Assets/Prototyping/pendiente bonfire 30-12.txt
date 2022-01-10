@@ -1,0 +1,25 @@
+
+EFECTOS DE SONIDO:
+- Player:
+  footsteps
+  cuando agarra botellas
+  cuando lo lastiman
+  cuando prende un bonfire (sonido de fuego)
+  cuando prende los 5 bonfires
+  arrow shot
+   
+- Enemy:
+  cuando lo lastiman (HIT AND DAMAGE 10)
+  cuando muere
+
+
+
+
+
+
+
+corregir rotacion de la flecha
+corregir ui cuando pierdo
+agregar +10 o +2 para indicar q subio mi health o power
+corregir el WonGame (NO MUESTRA QUE TERMINE EL JUEGO Y ME LLEVA AL LEVEL 2)
+

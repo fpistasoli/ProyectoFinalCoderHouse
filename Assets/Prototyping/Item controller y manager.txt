@@ -1,0 +1,38 @@
+InventoryManager: (acá cuento una vez que agarro el item de cada tipo)
+
+-private List inventoryHB; //healthBoosts
+-private List inventoryPB; //powerBoosts
+
+-[SerializeField] private int[] numberOfItems = {0,0};
+
++AddInventoryHB(item);
++AddInventoryPB(item);
++GetInventoryHB;
++GetInventoryPB;
++CountItems(gameObject item): dependiendo del tipo de item (switch), suma 1 a la posicion correspondiente en numberOfItems
+
+
+En el Start() hago new de cada estructura para cada inventory
+
+
+-----------------------------------------------------
+
+PickupController
+
+-[SerializeField] private ItemType itemType;
++public itemType GetItemType(): return itemType;
+
+-----------------------------------------------------
+
+PickupType (SINGLETON)
+
+-public enum itemType {HealthBoost, PowerBoost};
+
+-----------------------------------------------------
+
+PlayerController:
+
++UseItem()
++OnTriggerEnter() --> agarro item, agregar al inventario correspondiente
+
+

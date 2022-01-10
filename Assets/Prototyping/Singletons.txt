@@ -1,0 +1,16 @@
+SINGLETONS PERSISTENTES (DEBEN ESTAR SIN NINGUN PARENT)
+- GameManager (SOLO EN LEVEL 1)
+- ProfileManager (SOLO EN LEVEL 1)
+- HUD (SOLO EN LEVEL 1)
+
+
+- Projectile Config (EN TODOS LOS NIVELES)
+- Inventory Manager (EN TODOS LOS NIVELES)
+
+
+
+
+
+
+
+

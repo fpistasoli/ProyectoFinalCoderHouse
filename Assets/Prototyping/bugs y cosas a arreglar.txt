@@ -1,0 +1,44 @@
+BUGS Y COSAS A ARREGLAR/AGREGAR:
+
+
+CORREGIR ROTACION DE LA FLECHA
+AGREGAR BOTON DE EXIT GAME
+
+
+----------------------------------------------------------------------------------------------
+
+EVENTS:
+
+-HEALTH: onDeath
+
+subscribers:
+- GameOverHandler (GameManager)
+- OnDeathHandler (HUDController)
+
+
+EXITDOOR: onGameWon
+
+subscribers:
+- OnGameWonHandler (GameOverWinController)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

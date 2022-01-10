@@ -3,7 +3,7 @@
 
 2) AI:
 - Enemy animation
-- Types of enemies (NPCs): armed fixed, unarmed chaser
+- Types of enemies (NPCs): armed fixed (dispara bolas de fuego), unarmed chaser (se dirige al jugador cuando éste está a una distancia menor o igual a una constante y cuando llega al jugador empieza a atacarlo)
 - Objects that do harm: icy steam, frozen lakes
 
 3) Objects and collectable items:

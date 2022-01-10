@@ -5,11 +5,22 @@ TagManager:
   serializedVersion: 2
   tags:
   - Floor
+  - Enemy
+  - ProjectileSpawner
+  - Bonfire
+  - Exit
+  - Enemy Right Hand
+  - Boost
+  - Fire
+  - Drone
+  - SwitchDrone
+  - MistGenerator
+  - BossPoint
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Enemy
   - Water
   - UI
   - 
@@ -35,9 +46,9 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
-  - 
+  - ExitDoorCamPostProcessing
+  - GlobalPostProcessing
+  - Arrow
   m_SortingLayers:
   - name: Default
     uniqueID: 0
