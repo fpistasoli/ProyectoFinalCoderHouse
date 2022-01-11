@@ -91,7 +91,7 @@ namespace Bonfire.Combat
             //Debug.Log(direction);
 
 
-            transform.Rotate(arrowRotationAngle * Time.deltaTime * 100);
+            //transform.Rotate(arrowRotationAngle * Time.deltaTime * 100);
 
 
 

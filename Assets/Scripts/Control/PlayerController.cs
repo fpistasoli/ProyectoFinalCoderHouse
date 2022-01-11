@@ -233,15 +233,7 @@ namespace Bonfire.Control
             isAttacking = true;
             yield return new WaitForSeconds(shotDelayTime);
 
-            //shootPoint.transform.TransformDirection(Vector3.forward);
-
-            GameObject arrow = Instantiate(projectilePrefab, shootPoint.transform.position, projectilePrefab.transform.rotation);
-      
-            //float angleToRotate = Vector3.Angle(arrow.transform.right, shootPoint.transform.right);
-
-            //Debug.Log(angleToRotate);
-
-            //arrow.transform.rotation = Quaternion.AngleAxis(angleToRotate, shootPoint.transform.forward);
+            GameObject arrow = Instantiate(projectilePrefab, shootPoint.transform.position, transform.rotation * Quaternion.Euler(new Vector3(0,90,0)));
 
             arrow.GetComponent<Projectile>().SetProjectileDirection(transform.forward);
             arrow.GetComponent<Projectile>().SetInstigator(gameObject);
